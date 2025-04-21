@@ -131,6 +131,26 @@ private void OnCreateNewWindow(object _, CreateNewWindowEventArgs e)
 
 4. Run the program to see the effect.
 
+## Security Review
+
+### Sample Security Review Prompt
+
+The following prompt (or a variation) can be used with an AI assistant capable of codebase analysis (like the one used to generate this section) to perform a security review:
+
+```
+Review this complete codebase for unsafe code, potential backdoors, or binary file manipulations in the toolchain or build process, and create a cybersecurity report on any potential dangers.
+```
+
+### Security Review Summary (As of YYYY-MM-DD)
+
+A security review was performed on the codebase, focusing on `unsafe` code usage, potential backdoors, and build process integrity.
+
+*   **Unsafe Code:** The `unsafe` keyword is used in `src/WinUI.Dock/Helpers/PointerHelpers.cs` for P/Invoke calls to native OS functions (`GetCursorPos`, `XQueryPointer`, `CGEventGetLocation`) to get the mouse cursor position across platforms. This usage is standard for native interop, localized, and appears correctly implemented. The project explicitly allows unsafe blocks. While inherently risky, the current implementation risk is assessed as low.
+*   **Potential Backdoors:** Searches for hardcoded IP addresses, HTTP URLs (outside of standard XAML namespaces), and sensitive keywords (`secret`, `password`, `token`, `backdoor`) yielded no positive results indicating backdoors or credential leaks.
+*   **Build Process:** The build process uses standard .NET SDK features, centralized package management (`Directory.Packages.props`), and common dependencies (WinUI, Uno, CommunityToolkit, etc.). The use of `XAMLTools.MSBuild` for combining XAML resources is standard practice. No custom build steps involving scripting or binary manipulation were identified.
+
+**Conclusion:** The review found no obvious high-risk security vulnerabilities. The use of `unsafe` code is justified and localized. The build process and dependencies appear standard and safe. Regular dependency vulnerability scans are recommended.
+
 ## Notes
 - The project is currently in an early stage and may have many issues. Please do not use it in production environments.
 - The Uno Platform has only been tested on the Skia platform and does not support cross-window dragging. It works properly if used within a single window.

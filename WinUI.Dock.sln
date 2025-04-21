@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnoApp", "src\Examples\UnoA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinUIApp", "src\Examples\WinUIApp\WinUIApp.csproj", "{2D20E1A8-F02C-F26B-3863-C44F32150C7C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EditorApp", "src\\Examples\\EditorApp\\EditorApp.csproj", "{11111111-1111-1111-1111-111111111111}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{2D20E1A8-F02C-F26B-3863-C44F32150C7C}.Debug|Any CPU.Build.0 = Debug|x64
 		{2D20E1A8-F02C-F26B-3863-C44F32150C7C}.Release|Any CPU.ActiveCfg = Release|x64
 		{2D20E1A8-F02C-F26B-3863-C44F32150C7C}.Release|Any CPU.Build.0 = Release|x64
+		{11111111-1111-1111-1111-111111111111}.Debug|Any CPU.ActiveCfg = Debug|x64
+		{11111111-1111-1111-1111-111111111111}.Debug|Any CPU.Build.0 = Debug|x64
+		{11111111-1111-1111-1111-111111111111}.Release|Any CPU.ActiveCfg = Release|x64
+		{11111111-1111-1111-1111-111111111111}.Release|Any CPU.Build.0 = Release|x64
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{DF70ED4C-0838-C6E2-8C24-556C75C2B319} = {4C208E25-6D7B-4AC0-B5B6-E84FA035EC8F}
 		{2D20E1A8-F02C-F26B-3863-C44F32150C7C} = {4C208E25-6D7B-4AC0-B5B6-E84FA035EC8F}
+		{11111111-1111-1111-1111-111111111111} = {4C208E25-6D7B-4AC0-B5B6-E84FA035EC8F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AFA630F-E015-4BE9-BC0D-F90113E6FEB1}
